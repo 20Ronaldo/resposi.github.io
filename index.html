@@ -3,323 +3,204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio GitHub - reposi</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Mi Portfolio - GitHub</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
         }
 
         body {
-            background: linear-gradient(135deg, #0d1117, #161b22);
-            color: #c9d1d9;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             padding: 20px;
         }
 
-        header {
-            text-align: center;
-            padding: 60px 20px;
-            background: rgba(13, 17, 23, 0.8);
-            border-bottom: 1px solid #30363d;
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 800px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 0.6s ease-out;
         }
 
-        .profile {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
         }
 
         .avatar {
             width: 120px;
             height: 120px;
             border-radius: 50%;
-            background: linear-gradient(45deg, #238636, #2ea043);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 40px;
+            margin: 0 auto 20px;
+            font-size: 48px;
             color: white;
-            border: 4px solid #30363d;
+            font-weight: bold;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
         }
 
         h1 {
+            color: #2d3748;
             font-size: 2.5em;
-            color: #58a6ff;
             margin-bottom: 10px;
         }
 
         .subtitle {
+            color: #718096;
             font-size: 1.2em;
-            color: #8b949e;
-            margin-bottom: 20px;
         }
 
-        .repos-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 25px;
-            padding: 40px 0;
-        }
-
-        .repo-card {
-            background: #161b22;
-            border: 1px solid #30363d;
-            border-radius: 12px;
-            padding: 25px;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .repo-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, #238636, #2ea043);
-        }
-
-        .repo-card:hover {
-            transform: translateY(-5px);
-            border-color: #238636;
-            box-shadow: 0 10px 30px rgba(35, 134, 54, 0.2);
-        }
-
-        .repo-name {
-            color: #58a6ff;
-            font-size: 1.4em;
-            margin-bottom: 15px;
+        .social-links {
             display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .repo-name i {
-            color: #238636;
-        }
-
-        .repo-description {
-            color: #8b949e;
-            margin-bottom: 20px;
-            line-height: 1.5;
-        }
-
-        .repo-stats {
-            display: flex;
+            justify-content: center;
             gap: 20px;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
+            margin: 30px 0;
         }
 
-        .stat {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            color: #8b949e;
+        .social-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .social-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        .about {
+            background: #f7fafc;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+
+        .about h2 {
+            color: #2d3748;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+
+        .about p {
+            color: #4a5568;
+            line-height: 1.8;
+            font-size: 1.1em;
+        }
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .skill-tag {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 600;
+            color: #667eea;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #718096;
             font-size: 0.9em;
         }
 
-        .repo-link {
-            display: inline-block;
-            background: #238636;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background 0.3s ease;
-        }
-
-        .repo-link:hover {
-            background: #2ea043;
-        }
-
-        .loading {
-            text-align: center;
-            padding: 60px 20px;
-            font-size: 1.2em;
-            color: #8b949e;
-        }
-
-        .error {
-            text-align: center;
-            padding: 60px 20px;
-            color: #f85149;
-            font-size: 1.2em;
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px 20px;
-            border-top: 1px solid #30363d;
-            margin-top: 40px;
-            color: #8b949e;
-        }
-
-        @media (max-width: 768px) {
-            .repos-container {
-                grid-template-columns: 1fr;
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
             }
-            
+
             h1 {
                 font-size: 2em;
+            }
+
+            .social-links {
+                flex-direction: column;
+                gap: 10px;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <header>
-            <div class="profile">
-                <div class="avatar">
-                    <i class="fas fa-user"></i>
-                </div>
-                <h1>reposi</h1>
-                <p class="subtitle">Desarrollador & Creador</p>
-                <p>Mis proyectos y repositorios en GitHub</p>
-            </div>
-        </header>
+        <div class="header">
+            <div class="avatar">TU</div>
+            <h1>Tu Nombre</h1>
+            <p class="subtitle">Desarrollador Web | Creador de Proyectos</p>
+        </div>
 
-        <main>
-            <div class="loading" id="loading">
-                <i class="fas fa-spinner fa-spin"></i>
-                <p>Cargando repositorios de reposi...</p>
-            </div>
+        <div class="social-links">
+            <a href="https://github.com/tu-usuario" class="social-btn" target="_blank">
+                GitHub
+            </a>
+            <a href="mailto:tu-email@ejemplo.com" class="social-btn">
+                Contacto
+            </a>
+        </div>
 
-            <div class="repos-container" id="repos-container" style="display: none;">
-                <!-- Los repositorios se cargarán aquí -->
-            </div>
+        <div class="about">
+            <h2>Sobre Mí</h2>
+            <p>
+                ¡Hola! Soy un desarrollador apasionado por crear soluciones innovadoras.
+                Me encanta trabajar con tecnologías modernas y aprender constantemente.
+                Aquí encontrarás mis proyectos y contribuciones a la comunidad de código abierto.
+            </p>
+        </div>
 
-            <div class="error" id="error" style="display: none;">
-                <i class="fas fa-exclamation-triangle"></i>
-                <p>Error al cargar los repositorios</p>
-            </div>
-        </main>
+        <h2 style="color: #2d3748; margin-bottom: 20px; text-align: center;">Habilidades</h2>
+        <div class="skills">
+            <div class="skill-tag">HTML/CSS</div>
+            <div class="skill-tag">JavaScript</div>
+            <div class="skill-tag">React</div>
+            <div class="skill-tag">Node.js</div>
+            <div class="skill-tag">Git</div>
+            <div class="skill-tag">Python</div>
+        </div>
 
-        <footer>
-            <p>&copy; 2024 reposi - Portafolio GitHub</p>
-            <p>Hecho con ❤️ y código</p>
-        </footer>
+        <div class="footer">
+            <p>© 2025 Tu Nombre. Hecho con ❤️</p>
+        </div>
     </div>
-
-    <script>
-        // CONFIGURACIÓN - USUARIO DE GITHUB
-        const GITHUB_USERNAME = 'reposi';
-
-        // Elementos del DOM
-        const loadingElement = document.getElementById('loading');
-        const reposContainer = document.getElementById('repos-container');
-        const errorElement = document.getElementById('error');
-
-        // Función para cargar repositorios
-        async function loadRepositories() {
-            try {
-                console.log('Cargando repositorios de:', GITHUB_USERNAME);
-                
-                const response = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=50`);
-                
-                if (!response.ok) {
-                    throw new Error(`Error HTTP: ${response.status}`);
-                }
-                
-                const repos = await response.json();
-                
-                console.log('Repositorios cargados:', repos.length);
-                
-                // Ocultar loading
-                loadingElement.style.display = 'none';
-                
-                if (repos.length === 0) {
-                    errorElement.innerHTML = '<p>No se encontraron repositorios públicos</p>';
-                    errorElement.style.display = 'block';
-                    return;
-                }
-                
-                // Mostrar repositorios
-                reposContainer.innerHTML = '';
-                
-                repos.forEach(repo => {
-                    // Saltar forks si no quieres mostrarlos
-                    if (repo.fork) return;
-                    
-                    const repoCard = document.createElement('div');
-                    repoCard.className = 'repo-card';
-                    
-                    repoCard.innerHTML = `
-                        <h3 class="repo-name">
-                            <i class="fas fa-code"></i>
-                            ${repo.name}
-                        </h3>
-                        <p class="repo-description">
-                            ${repo.description || 'Repositorio sin descripción'}
-                        </p>
-                        <div class="repo-stats">
-                            <span class="stat">
-                                <i class="fas fa-star"></i>
-                                ${repo.stargazers_count}
-                            </span>
-                            <span class="stat">
-                                <i class="fas fa-code-branch"></i>
-                                ${repo.forks_count}
-                            </span>
-                            <span class="stat">
-                                <i class="fas fa-eye"></i>
-                                ${repo.watchers_count}
-                            </span>
-                            ${repo.language ? `
-                                <span class="stat">
-                                    <i class="fas fa-circle" style="color: #238636;"></i>
-                                    ${repo.language}
-                                </span>
-                            ` : ''}
-                        </div>
-                        <a href="${repo.html_url}" target="_blank" class="repo-link">
-                            Ver en GitHub <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    `;
-                    
-                    reposContainer.appendChild(repoCard);
-                });
-                
-                // Mostrar contenedor de repositorios
-                reposContainer.style.display = 'grid';
-                
-            } catch (error) {
-                console.error('Error:', error);
-                
-                // Mostrar error
-                loadingElement.style.display = 'none';
-                errorElement.innerHTML = `
-                    <i class="fas fa-exclamation-triangle"></i>
-                    <p>Error al cargar repositorios</p>
-                    <p style="font-size: 0.9em; margin-top: 10px;">${error.message}</p>
-                `;
-                errorElement.style.display = 'block';
-            }
-        }
-
-        // Cargar repositorios cuando la página esté lista
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('Iniciando carga de repositorios...');
-            loadRepositories();
-        });
-
-        // Manejar errores no capturados
-        window.addEventListener('error', function(e) {
-            console.error('Error global:', e.error);
-        });
-    </script>
 </body>
 </html>
