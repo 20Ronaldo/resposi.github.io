@@ -4,192 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio de Estadística Computacional</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: #f8f9fa;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        header {
-            background: linear-gradient(135deg, #2c3e50, #4a6491);
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px 0;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        h2 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            color: #2c3e50;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 0.5rem;
-        }
-
-        h3 {
-            font-size: 1.4rem;
-            margin-bottom: 0.5rem;
-            color: #2c3e50;
-        }
-
-        p {
-            margin-bottom: 1rem;
-        }
-
-        .profile {
-            text-align: center;
-            margin: 2rem 0;
-        }
-
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 4px solid #3498db;
-            margin-bottom: 1rem;
-        }
-
-        .section {
-            background: white;
-            border-radius: 8px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-        }
-
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .skill-item {
-            background: #3498db;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-        }
-
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
-        }
-
-        .project-card {
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .project-header {
-            background: #2c3e50;
-            color: white;
-            padding: 1rem;
-        }
-
-        .project-content {
-            padding: 1.5rem;
-        }
-
-        .project-links {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 1rem;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 0.7rem 1.5rem;
-            background: #3498db;
-            color: white;
-            text-decoration: none;
-            border-radius: 4px;
-            font-weight: 600;
-            transition: background 0.3s ease;
-        }
-
-        .btn:hover {
-            background: #2980b9;
-        }
-
-        .btn-pdf {
-            background: #e74c3c;
-        }
-
-        .btn-pdf:hover {
-            background: #c0392b;
-        }
-
-        .btn-code {
-            background: #2ecc71;
-        }
-
-        .btn-code:hover {
-            background: #27ae60;
-        }
-
-        .contact-info {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            margin-top: 1rem;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        footer {
-            background: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 1.5rem 0;
-            margin-top: 2rem;
-        }
-
-        @media (max-width: 768px) {
-            .projects {
-                grid-template-columns: 1fr;
-            }
-            
-            .contact-info {
-                flex-direction: column;
-            }
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -202,7 +18,7 @@
     <div class="container">
         <section class="profile">
             <img src="https://via.placeholder.com/150" alt="Foto de perfil" class="profile-img">
-            <h2>Tu Nombre</h2>
+            <h2>Ronaldo</h2>
             <p>Estudiante de Estadística Computacional</p>
         </section>
 
@@ -212,73 +28,9 @@
         </section>
 
         <section class="section">
-            <h2>Habilidades Técnicas</h2>
-            <div class="skills">
-                <div class="skill-item">Programación en R</div>
-                <div class="skill-item">Análisis Estadístico</div>
-                <div class="skill-item">Visualización de Datos</div>
-                <div class="skill-item">Machine Learning</div>
-                <div class="skill-item">Minería de Datos</div>
-                <div class="skill-item">Estadística Bayesiana</div>
-                <div class="skill-item">Series de Tiempo</div>
-                <div class="skill-item">Análisis Multivariado</div>
-            </div>
-        </section>
-
-        <section class="section">
             <h2>Trabajos y Proyectos</h2>
-            <div class="projects">
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Introducción a R (CV)</h3>
-                    </div>
-                    <div class="project-content">
-                        <p>Análisis exploratorio de datos y creación de curriculums usando R.</p>
-                        <div class="project-links">
-                            <a href="#" class="btn btn-pdf"><i class="fas fa-file-pdf"></i> Ver PDF</a>
-                            <a href="#" class="btn btn-code"><i class="fas fa-code"></i> Ver Código R</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Análisis de Series Temporales</h3>
-                    </div>
-                    <div class="project-content">
-                        <p>Modelado y pronóstico de series de tiempo utilizando modelos ARIMA.</p>
-                        <div class="project-links">
-                            <a href="#" class="btn btn-pdf"><i class="fas fa-file-pdf"></i> Ver PDF</a>
-                            <a href="#" class="btn btn-code"><i class="fas fa-code"></i> Ver Código R</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Análisis Cluster</h3>
-                    </div>
-                    <div class="project-content">
-                        <p>Aplicación de técnicas de clustering para segmentación de datos.</p>
-                        <div class="project-links">
-                            <a href="#" class="btn btn-pdf"><i class="fas fa-file-pdf"></i> Ver PDF</a>
-                            <a href="#" class="btn btn-code"><i class="fas fa-code"></i> Ver Código R</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Regresión Lineal Múltiple</h3>
-                    </div>
-                    <div class="project-content">
-                        <p>Implementación y validación de modelos de regresión lineal múltiple.</p>
-                        <div class="project-links">
-                            <a href="#" class="btn btn-pdf"><i class="fas fa-file-pdf"></i> Ver PDF</a>
-                            <a href="#" class="btn btn-code"><i class="fas fa-code"></i> Ver Código R</a>
-                        </div>
-                    </div>
-                </div>
+            <div class="projects" id="projects-container">
+                <!-- Los proyectos se cargarán aquí mediante JavaScript -->
             </div>
         </section>
 
@@ -287,7 +39,7 @@
             <div class="contact-info">
                 <div class="contact-item">
                     <i class="fas fa-envelope"></i>
-                    <span>tu.email@ejemplo.com</span>
+                    <span>ronaldo.email@ejemplo.com</span>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-phone"></i>
@@ -295,11 +47,11 @@
                 </div>
                 <div class="contact-item">
                     <i class="fab fa-linkedin"></i>
-                    <span>linkedin.com/in/tunombre</span>
+                    <span>linkedin.com/in/ronaldo</span>
                 </div>
                 <div class="contact-item">
                     <i class="fab fa-github"></i>
-                    <span>github.com/tunombre</span>
+                    <span>github.com/ronaldo</span>
                 </div>
             </div>
         </section>
@@ -310,5 +62,7 @@
             <p>&copy; 2023 Portafolio de Estadística Computacional. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
