@@ -165,4 +165,13 @@ footer {
     .contact-info {
         flex-direction: column;
     }
+    
+    .project-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .project-links .btn {
+        text-align: center;
+    }
 }
