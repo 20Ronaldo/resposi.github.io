@@ -3,149 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio - Ronaldo</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Montserrat:wght@700&display=swap">
+    <title>Mi Portafolio Personal</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Header y Navegación -->
     <header>
         <nav class="navbar">
             <div class="nav-container">
-                <div class="nav-logo">Ronaldo</div>
+                <div class="nav-logo">MiPortafolio</div>
                 <ul class="nav-menu">
-                    <li><a href="#acerca"><i class="fas fa-user"></i> Acerca de mí</a></li>
-                    <li><a href="#proyectos"><i class="fas fa-code"></i> Proyectos</a></li>
+                    <li><a href="#inicio"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="#sobre-mi"><i class="fas fa-user"></i> Sobre Mí</a></li>
+                    <li><a href="#habilidades"><i class="fas fa-code"></i> Habilidades</a></li>
                     <li><a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a></li>
                 </ul>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
             </div>
         </nav>
     </header>
 
-    <section id="hero">
+    <!-- Sección Hero / Inicio -->
+    <section id="inicio" class="hero">
         <div class="hero-content">
-            <h1 class="hero-title">¡Hola! Soy <span class="highlight">Ronaldo</span></h1>
-            <p class="hero-subtitle">Desarrollador web apasionado por crear experiencias digitales increíbles. Explora mi trabajo y conéctate conmigo.</p>
-            <a href="#proyectos" class="cta-button">Ver Mis Proyectos</a>
-        </div>
-        <div class="hero-image">
-            <img src="https://via.placeholder.com/400x500?text=Tu+Foto" alt="Mi foto de perfil" class="profile-img">
+            <h1>Hola, soy <span class="highlight">[Tu Nombre]</span></h1>
+            <p>Desarrollador Web & Apasionado por la Tecnología</p>
+            <a href="#contacto" class="btn">Contáctame</a>
         </div>
     </section>
 
-    <section id="acerca">
+    <!-- Sección Sobre Mí -->
+    <section id="sobre-mi" class="about">
         <div class="container">
-            <h2 class="section-title">Acerca de Mí</h2>
-            <div class="acerca-content">
-                <p>Soy un desarrollador web junior con más de 1 año de experiencia en HTML, CSS, JavaScript, Python y bases de datos como SQLite y PostgreSQL. Me apasiona resolver problemas prácticos y construir apps que ayuden en el día a día, como sistemas de gestión. Cuando no estoy codificando, disfruto jugar fútbol y programar proyectos personales.</p>
-                <div class="skills">
-                    <h3>Habilidades Principales</h3>
-                    <ul>
-                        <li><i class="fab fa-html5"></i> HTML5 & CSS3</li>
-                        <li><i class="fab fa-js-square"></i> JavaScript</li>
-                        <li><i class="fab fa-python"></i> Python</li>
-                        <li><i class="fas fa-database"></i> PostgreSQL & SQLite</li>
-                    </ul>
+            <h2>Sobre Mí</h2>
+            <p>Soy un desarrollador web con experiencia en crear sitios web modernos y responsivos. Me encanta aprender nuevas tecnologías y enfrentar desafíos.</p>
+        </div>
+    </section>
+
+    <!-- Sección Habilidades -->
+    <section id="habilidades" class="skills">
+        <div class="container">
+            <h2>Mis Habilidades</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <i class="fab fa-html5"></i>
+                    <h3>HTML5</h3>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-css3-alt"></i>
+                    <h3>CSS3</h3>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-js"></i>
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-git"></i>
+                    <h3>Git</h3>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="proyectos">
+    <!-- Sección Contacto -->
+    <section id="contacto" class="contact">
         <div class="container">
-            <h2 class="section-title">Proyectos Destacados</h2>
-            <div class="proyectos-grid">
-                <div class="proyecto-card">
-                    <img src="https://via.placeholder.com/300x200?text=Proyecto+1" alt="Proyecto 1">
-                    <div class="proyecto-info">
-                        <h3>Proyecto 1: Mi Primera App</h3>
-                        <p>Una aplicación interactiva en JavaScript con funcionalidades de [descripción breve].</p>
-                        <div class="proyecto-links">
-                            <a href="https://github.com/tuusuario/proyecto1" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="proyecto-card">
-                    <img src="https://via.placeholder.com/300x200?text=Proyecto+2" alt="Proyecto 2">
-                    <div class="proyecto-info">
-                        <h3>Proyecto 2: Sitio Web Responsivo</h3>
-                        <p>Un portafolio adaptable con diseño moderno y optimizado para SEO.</p>
-                        <div class="proyecto-links">
-                            <a href="https://github.com/tuusuario/proyecto2" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Tus proyectos nuevos aquí -->
-                <div class="proyecto-card">
-                    <img src="https://via.placeholder.com/300x200?text=Inventario" alt="Sistema de Inventario">
-                    <div class="proyecto-info">
-                        <h3>Sistema de Inventario y Ventas</h3>
-                        <p>App en Python con SQLite para gestionar stock, ventas y consultas en una plaza comercial.</p>
-                        <div class="proyecto-links">
-                            <a href="https://github.com/20ronaldo/sistema-inventario-python" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="proyecto-card">
-                    <img src="https://via.placeholder.com/300x200?text=SQL" alt="Procedimientos PostgreSQL">
-                    <div class="proyecto-info">
-                        <h3>Procedimientos Almacenados en PostgreSQL</h3>
-                        <p>Cuatro procedimientos para operaciones aritméticas básicas con verificación de errores (ej: división por cero).</p>
-                        <div class="proyecto-links">
-                            <a href="https://github.com/20ronaldo/procedimientos-postgresql" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="proyecto-card">
-                    <img src="https://via.placeholder.com/300x200?text=Matricula" alt="Sistema de Matrícula">
-                    <div class="proyecto-info">
-                        <h3>Sistema de Matrícula Universitaria</h3>
-                        <p>Sistema para la UNAP Puno: tablas para facultades, estudiantes y matrículas, escalable a 20 carreras.</p>
-                        <div class="proyecto-links">
-                            <a href="https://github.com/20ronaldo/sistema-matricula-unap" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Demo</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Fin de tus proyectos -->
-            </div>
-        </div>
-    </section>
-
-    <section id="contacto">
-        <div class="container">
-            <h2 class="section-title">Contacto</h2>
-            <p class="contact-text">¿Interesado en colaborar? Envía un mensaje o conéctate en redes.</p>
+            <h2>Contacto</h2>
             <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <p>ronaldo@ejemplo.com</p> <!-- Pon tu email real aquí -->
-                </div>
-                <div class="contact-item">
-                    <i class="fab fa-github"></i>
-                    <a href="https://github.com/20ronaldo" target="_blank">@20ronaldo</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fab fa-linkedin"></i>
-                    <a href="https://linkedin.com/in/20ronaldo" target="_blank">LinkedIn</a> <!-- Pon tu link real -->
-                </div>
+                <p><i class="fas fa-envelope"></i> email@ejemplo.com</p>
+                <p><i class="fas fa-phone"></i> +123 456 7890</p>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
-        <div class="container">
-            <p>&copy; 2025 Ronaldo. Hecho con ❤️ y código limpio. | <a href="#hero">Volver arriba</a></p>
-        </div>
+        <p>&copy; 2024 Mi Portafolio. Todos los derechos reservados.</p>
     </footer>
 
     <script src="script.js"></script>
